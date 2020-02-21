@@ -8,11 +8,10 @@ function setup () {
 
 function draw() {
   background(0);
-  sticks.move();
-  sticks.show();
-  for (var i = 20; i < 400; i += 60) {
-    line(i, 40, i + 60, 80);
-  }
+  for (let i = 0; i < 10; i++) {
+    sticks.move();
+    sticks.show();
+}
 }
 
 class Sticks {
@@ -22,8 +21,8 @@ class Sticks {
   }
 
   move() {
-    this.x = this.x + random(-10, 5);
-    this.y = this.y + random(-5, 15);
+    this.x = random(width);
+    this.y = random(height);
   }
 
   show() {
